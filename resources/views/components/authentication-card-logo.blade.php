@@ -1,0 +1,1 @@
+<img src="{{ asset('images') }}/blog.png" alt="logo-dark" height="10">
