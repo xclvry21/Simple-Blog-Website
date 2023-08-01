@@ -28,7 +28,7 @@
                 <div class="col-lg-8">
                     <!-- Featured blog post-->
                     <div class="card mb-4">
-                        <a href="#!"><img class="card-img-top" src="{{$photo}}" alt="{{$latest->title}}" /></a>
+                        <a href="{{route('blog.show', $latest )}}"><img class="card-img-top" src="{{$photo}}" alt="{{$latest->title}}" /></a>
                         <div class="card-body">
                             <div class="small text-muted">{{$latest->created_at->diffForHumans()}}</div>
                             <h2 class="card-title">{{$latest->title}}</h2>
@@ -55,7 +55,7 @@
                         <div class="col-lg-6">
                             <!-- Blog post-->
                             <div class="card mb-4">
-                                <a href="#!"><img class="card-img-top" src="{{$photo}}" alt="{{$post->title}}" /></a>
+                                <a href="{{route('blog.show', $post )}}"><img class="card-img-top" src="{{$photo}}" alt="{{$post->title}}" /></a>
                                 <div class="card-body">
                                     <div class="small text-muted">{{$post->created_at->diffForHumans()}}</div>
                                     <h2 class="card-title h4">{{$post->title}}</h2>
