@@ -13,7 +13,9 @@
 
 - Create a link of storage folder to public folder using `php artisan storage:link`
 - Run database seeder using the command `php artisan db:seed`
-
+  
+:camera: [Snapshots](https://drive.google.com/drive/folders/12dcmlWm50xbYkubJrmahOrdLJCKKMphU?usp=drive_link)
 ___
 ### Add-ons
 - **[Toastr.js](https://github.com/yoeunes/toastr)**
+- **[Laravel Jetstream](https://jetstream.laravel.com)**
