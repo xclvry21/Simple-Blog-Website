@@ -30,5 +30,9 @@ class Post extends Model
         static::updating(function (self $model) {
             $model->updated_at = now()->toTimeString();
         });
+
+        static::deleting(function (self $model) {
+            $model->deleted_at = now()->toTimeString();
+        });
     }
 }

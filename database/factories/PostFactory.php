@@ -17,12 +17,12 @@ class PostFactory extends Factory
     public function definition(): array
     {
         $user_id = rand(1, 10);
-        $pic_id = rand(0, 1500);
+        $pic_id = rand(0, 1024);
 
         return [
             'user_id' => $user_id,
             'title' => $this->faker->sentence(),
-            'photo_path' => "https://picsum.photos/800/600?random=$pic_id",
+            'photo_path' => "https://picsum.photos/id/$pic_id/{width}/{height}",
             'body' => $this->faker->text()
         ];
     }
