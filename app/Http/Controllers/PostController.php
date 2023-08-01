@@ -68,7 +68,6 @@ class PostController extends Controller
 
         $comments = Comment::where('post_id', $post->id)->latest()->get();
 
-
         return view('user_custom_dashboard.crud.show', [
             'title' => "Show Post",
             'post' => $post,

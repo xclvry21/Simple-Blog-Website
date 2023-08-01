@@ -8,6 +8,13 @@
             <ul class="metismenu list-unstyled" id="side-menu">
 
                 <li>
+                    <a href="{{ route('blog.index') }}">
+                        <i class="ri-home-2-line"></i>
+                        <span>Home</span>
+                    </a> 
+                </li>
+
+                <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ri-sticky-note-line"></i>
                         <span>Posts</span>

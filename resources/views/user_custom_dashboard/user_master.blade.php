@@ -10,7 +10,7 @@
         <meta content="Themesdesign" name="author" />
 
         <!-- App favicon -->
-        <link rel="shortcut icon" href="{{ asset('dashboard_body') }}/assets/images/mynotes_favicon.ico">
+        <link rel="shortcut icon" href="{{ asset('images') }}/blog.ico">
 
         <!-- Bootstrap Css -->
         <link href="{{ asset('dashboard_body') }}/assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />

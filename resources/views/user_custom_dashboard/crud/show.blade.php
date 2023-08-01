@@ -37,6 +37,13 @@ use App\Models\User;
 
                         <h5>Comments ( {{$comments->count()}} )</h5>
                         <div class="container">
+                            <form class="mb-4" action="{{ route('comment.store') }}" method="post">@csrf
+                                <textarea class="form-control" rows="3" placeholder="Join the discussion and leave a comment!" name="body" required></textarea>
+                                <input type="hidden" value="{{$post->id}}" name="post_id">
+
+                                <input type="submit" class="btn btn-sm m-1 btn-primary waves-effect waves-light" value="Submit" id="#" style="float: right;">
+                            </form>
+                            
                             <div class="be-comment-block">
                             @foreach ($comments as $comment)
                             @php

@@ -1,7 +1,9 @@
 <?php
 
-use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BlogController;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\CommentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,4 +42,13 @@ Route::middleware([
         Route::post('user/posts', 'store')->name('post.store');
         Route::put('user/posts/{id}', 'update')->name('post.update');
     });
+
+    Route::controller(CommentController::class)->group(function(){
+        Route::post('comment', 'store')->name('comment.store');
+    });
+});
+
+Route::controller(BlogController::class)->group(function () {
+    Route::get('blogs/', 'index')->name('blog.index');
+    Route::get('blogs/{post}', 'show')->name('blog.show');
 });
