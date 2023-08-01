@@ -47,17 +47,11 @@ $default_pic = 'https://ui-avatars.com/api/?name='.urlencode($name).'&color=7F9C
                     <a class="dropdown-item" href="{{ route('profile.show') }}"><i class="ri-user-line align-middle me-1"></i> Profile</a>
                     <div class="dropdown-divider"></div>
 
-                    <form method="POST" action="{{ route('logout') }}">
+                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="ri-logout-box-r-line me-1"></i> Logout</a>
+                    <form action="{{ url('logout') }}" method="POST" style="display: none;" id="logout-form">
                         @csrf
-                        <div class="dropdown-item text-danger">
-                            <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                        this.closest('form').submit(); " role="button">
-                                <i class="fas fa-sign-out-alt text-danger"></i>
-                
-                                {{ __('Log Out') }}
-                            </a>
-                        </div>
-                    </form>
+                        <input type="submit" value="Logout">
+                    </form>    
                 </div>
             </div>
 

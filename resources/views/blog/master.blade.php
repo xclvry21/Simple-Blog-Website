@@ -21,10 +21,15 @@
                     @if (Auth::user())
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                             <li class="nav-item"><a class="nav-link" href="{{route('post.index')}}">Dashboard</a></li>
-                            <form action="{{ url('logout') }}" method="POST">
+                            {{-- logout --}}
+                            <li class="nav-item"><a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                Logout
+                            </a></li>
+                            <form action="{{ url('logout') }}" method="POST" style="display: none;" id="logout-form">
                                 @csrf
                                 <input type="submit" value="Logout">
                             </form>
+                            {{-- logout --}}
                         </ul>
                     @else
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">

@@ -49,6 +49,7 @@ Route::middleware([
 });
 
 Route::controller(BlogController::class)->group(function () {
+    Route::get('/', 'index')->name('blog.index');
     Route::get('blogs/', 'index')->name('blog.index');
     Route::get('blogs/{post}', 'show')->name('blog.show');
 });

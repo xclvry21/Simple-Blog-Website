@@ -17,7 +17,7 @@
             <div class="container">
                 <div class="text-center my-5">
                     <h1 class="fw-bolder">Welcome to {{config('app.name')}}</h1>
-                    <p class="lead mb-0">A Bootstrap 5 starter layout for your next blog homepage</p>
+                    <p class="lead mb-0">Show what's on your mind. Create your blog post now!</p>
                 </div>
             </div>
         </header>
